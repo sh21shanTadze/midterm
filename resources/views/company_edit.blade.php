@@ -1,3 +1,5 @@
+@extends('index')
+@section('content')
 <h1>edit company</h1>
 <form action="{{route('comp.update', ['company' => $company->id])}}" method="POST">
     @csrf
@@ -8,3 +10,4 @@
     <input type="text" name="country" value="{{$company->country}}">
     <button type="submit">edit</button>
 </form>
+@endsection

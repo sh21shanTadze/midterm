@@ -1,3 +1,5 @@
+@extends('index')
+@section('content')
 <h1>edit company</h1>
 <form action="{{route('emp.update', ['employee' => $employee->id])}}" method="POST">
     @csrf
@@ -8,4 +10,4 @@
     <input type="text" name="salary" value="{{$employee->salary}}">
     <button type="submit">edit</button>
 </form>
-
+@endsection

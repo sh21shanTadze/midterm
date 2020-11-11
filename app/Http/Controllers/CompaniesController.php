@@ -12,7 +12,7 @@ class CompaniesController extends Controller
 
         $companies = Company::all();
         $employee = Empoloyee::all();
-        return view('index')->with(['companies' => $companies, 'employee' => $employee]);
+        return view('data')->with(['companies' => $companies, 'employee' => $employee]);
     }
     public function create(Request $request){
         $comp = new Company();
